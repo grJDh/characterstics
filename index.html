@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Характеристики</title>
+  <link rel="stylesheet" href="main.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+	<div class = "main">
+		<div class="base">
+			<div class="wrap">
+				<span class="char_name">Сила</span>
+				<div class="strength characteristic">
+					<div class="plus counter" onclick="increase('strength')">
+						<span>+</span>
+					</div>
+					<span class="strength number">8</span>
+					<span class="strength cost">-1</span>
+					<div class="minus counter" onclick="decrease('strength')">
+						<span>-</span>
+					</div>
+				</div>
+			</div>
+			<div class="wrap">
+				<span class="char_name">Ловкость</span>
+				<div class="dexeterity characteristic">
+					<div class="plus counter" onclick="increase('dexeterity')">
+						<span>+</span>
+					</div>
+					<span class="dexeterity number">8</span>
+					<span class="dexeterity cost">-1</span>
+					<div class="minus counter" onclick="decrease('dexeterity')">
+						<span>-</span>
+					</div>
+				</div>
+			</div>
+			<div class="wrap">
+				<span class="char_name">Телосложение</span>
+				<div class="constitution characteristic">
+					<div class="plus counter" onclick="increase('constitution')">
+						<span>+</span>
+					</div>
+					<span class="constitution number">8</span>
+					<span class="constitution cost">-1</span>
+					<div class="minus counter" onclick="decrease('constitution')">
+						<span>-</span>
+					</div>
+				</div>
+			</div>
+			<div class="wrap">
+				<span class="char_name">Интеллект</span>
+				<div class="intelligence characteristic">
+					<div class="plus counter" onclick="increase('intelligence')">
+						<span>+</span>
+					</div>
+					<span class="intelligence number">8</span>
+					<span class="intelligence cost">-1</span>
+					<div class="minus counter" onclick="decrease('intelligence')">
+						<span>-</span>
+					</div>
+				</div>
+			</div>
+			<div class="wrap">
+				<span class="char_name">Мудрость</span>
+				<div class="wisdom characteristic">
+					<div class="plus counter" onclick="increase('wisdom')">
+						<span>+</span>
+					</div>
+					<span class="wisdom number">8</span>
+					<span class="wisdom cost">-1</span>
+					<div class="minus counter" onclick="decrease('wisdom')">
+						<span>-</span>
+					</div>
+				</div>
+			</div>
+			<div class="wrap">
+				<span class="char_name">Харизма</span>
+				<div class="charisma characteristic">
+					<div class="plus counter" onclick="increase('charisma')">
+						<span>+</span>
+					</div>
+					<span class="charisma number">8</span>
+					<span class="charisma cost">-1</span>
+					<div class="minus counter" onclick="decrease('charisma')">
+						<span>-</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<form class="options">
+			<input class="points option" type="number" value="30">
+			<select name="race" class="race option" onchange="changeSubrace()">
+				<option value="dwarf" selected>Дварф</option>
+				<option value="elf">Эльф</option>
+				<option value="human">Человек</option>
+				<option value="halfling">Полурослик</option>
+				<option value="dragonborn">Драконорождённый</option>
+				<option value="gnome">Гном</option>
+				<option value="halfelf">Полуэльф</option>
+				<option value="halforc">Полуорк</option>
+				<option value="tiefling">Тифлинг</option>
+			</select>
+
+			<select name="dwarf-race" class="subrace dwarf-race option" onchange="chooseRace()">
+				<option value="mountain-dwarf">Горный дварф</option>
+				<option value="hill-dwarf">Холмовой дварф</option>
+			</select>
+
+			<select name="elf-race" class="subrace elf-race option hidden" onchange="chooseRace()">
+				<option value="high-elf">Высший эльф</option>
+				<option value="forest-elf">Лесной эльф</option>
+				<option value="dark-elf">Тёмный эльф (Дроу)</option>
+			</select>
+
+			<select name="human-race" class="subrace human-race option hidden" onchange="chooseRace()">
+				<option value="none">-</option>
+			</select>
+
+			<select name="halfling-race" class="subrace halfling-race option hidden" onchange="chooseRace()">
+				<option value="stocky-halfling">Коренастый полурослик</option>
+				<option value="lungs-halfling">Легконогий полурослик</option>
+			</select>
+
+			<select name="dragonborn-race" class="subrace dragonborn-race option hidden" onchange="chooseRace()">
+				<option value="none">-</option>
+			</select>
+
+			<select name="gnome-race" class="subrace gnome-race option hidden" onchange="chooseRace()">
+				<option value="forest-gnome">Лесной гном</option>
+				<option value="rocky-gnome">Скальный гном</option>
+			</select>
+
+			<select name="halfelf-race" class="subrace halfelf-race option hidden" onchange="chooseRace()">
+				<option value="none">-</option>
+			</select>
+
+			<select name="halforc-race" class="subrace halforc-race option hidden" onchange="chooseRace()">
+				<option value="none">-</option>
+			</select>
+
+			<select name="tiefling-race" class="subrace tiefling-race option hidden" onchange="chooseRace()">
+				<option value="none">-</option>
+			</select>
+			<div>
+				<input type="checkbox" class="race-bonus option" name="race-bonus" value="true" onchange="applyBonuses()">Применять расовые бонусы
+			</div>
+		</form>
+	</div>
+
+	<script src="main.js"></script>
+
+</body>
+</html>
