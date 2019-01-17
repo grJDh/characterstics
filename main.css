@@ -1,5 +1,8 @@
 html {
-	background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
+	background: #EBDD01;
+	background: -webkit-radial-gradient(top left, #EBDD01, #9E5F02);
+	background: -moz-radial-gradient(top left, #EBDD01, #9E5F02);
+	background: radial-gradient(top left, #EBDD01, #9E5F02);
 
 }
 
